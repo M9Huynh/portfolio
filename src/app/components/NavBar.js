@@ -1,6 +1,8 @@
-import Link from 'next/link';
-import react from 'react';
-import NavLink from './NavLink';
+import NavLink from './helper/NavLink';
+import Image from 'next/image';
+import linkedin from '../images/linkedin.svg';
+import github from '../images/github.svg';
+import youtube from '../images/youtube.svg';
 
 const navLinks = [
     {
@@ -15,15 +17,18 @@ const navLinks = [
     {
         title: "Projects",
         href: "#projects"
+    },
+    {
+        title: "Resume",
+        href: "/"
     }
 ]
 
 const NavBar = () => {
     return(
-      <aside className='w-[270px] max-w-xs h-screen fixed left-0 top-0 border-r'>
-        <div className="px-3 py-4">
-            <Link href="/" className="text-5xl text-black font-thin">Matthew</Link>
-            <ul >
+      <aside className="md:text-right">
+        <div className="">
+            <ul className="py-5">
                 {navLinks.map((link, index) => (
                     <li key={link}>
                         <NavLink href={link.href} title={link.title} />
@@ -31,6 +36,32 @@ const NavBar = () => {
                 ))
                 }
             </ul>
+            <div className="flex flex-row justify-evenly">
+                <a href="https://github.com/M9Huynh/" target="_blank">
+                    <Image 
+                        src={github} 
+                        alt="GitHub Logo"
+                        width={20}
+                        height={20}
+                    />
+                </a>
+                <a href="https://www.linkedin.com/in/matthew-huynh/" target="_blank">
+                    <Image 
+                        src={linkedin} 
+                        alt="Linkedin Logo"
+                        width={20}
+                        height={20}
+                    />
+                </a>
+                <a href="https://www.youtube.com/@madebymattheus" target="_blank">
+                    <Image 
+                        src={youtube} 
+                        alt="Youtube Logo"
+                        width={20}
+                        height={20}
+                    />
+                </a>
+            </div>
         </div>
       </aside>  
     );
