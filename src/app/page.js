@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="bg-sky-200 md:flex justify-center py-20 px-32 ">
+    <main className="h-screen bg-sky-200 md:flex justify-center py-20 px-32 ">
       <div><NavBar /></div>
       <div className="max-w-2xl px-10">
         <div className=""><About /></div>

@@ -7,7 +7,7 @@ const jobs = [
         company: "Jetson Infinity",
         desc: "",
         time: "Oct. 2023 - Aug 2024",
-        skills: "Leadership, Time Management, Communication, Problem Solving, Critical Thinking"
+        // skills: ["Leadership", "Time "]
         
     }, 
     {
