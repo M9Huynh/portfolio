@@ -4,6 +4,7 @@ import Image from 'next/image';
 import linkedin from '../images/linkedin.svg';
 import github from '../images/github.svg';
 import youtube from '../images/youtube.svg';
+import headshot from '../images/headshot.jpg'
 
 const navLinks = [
     {
@@ -24,10 +25,16 @@ const navLinks = [
 const NavBar = () => {
     return(
       <aside className="md:text-right">
-        <div className="">
-            <ul className="py-5">
+        <Image
+            src={headshot}
+            alt="headshot"
+            width={150}
+            className="rounded-full justify-center"
+        />
+        <div className="text-center">
+            <ul className="py-3 text-lg">
                 {navLinks.map((link, index) => (
-                    <li key={link}>
+                    <li key={link} className="my-3">
                         <NavLink href={link.href} title={link.title} />
                     </li>
                 ))
@@ -45,7 +52,6 @@ const NavBar = () => {
                         alt="GitHub Logo"
                         width={20}
                         height={20}
-                        className="fill-white"
                     />
                 </a>
                 <a href="https://www.linkedin.com/in/matthew-huynh/" target="_blank">
